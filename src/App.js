@@ -17,7 +17,7 @@ const urlForPhotos = 'https://api.foursquare.com/v2/venues/'
 // const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 function App() {
-const [city, setCity] = useState(null ? null : []);
+const [city, setCity] = useState([]);
 const [posts, setPost] = useState([]);
 // const [venuePhotos, setVenuePhotos] = useState([])
 

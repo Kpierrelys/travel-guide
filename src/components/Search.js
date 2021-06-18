@@ -10,7 +10,7 @@ const Search = ({ inputValue }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!location) {
-            alert('location needed...')
+            alert('city needed...')
         } else {
             inputValue(location);
             setLocation('')
@@ -20,7 +20,7 @@ const Search = ({ inputValue }) => {
     return (
         <form onSubmit={handleSubmit} className='search-engine'>
             <h3>Where Do You Want to go?</h3>
-            <input type="text" name="search" placeholder='Search..'  autoComplete='off' value={location}
+            <input type="text" name="search" placeholder='Search city..'  autoComplete='off' value={location}
           onChange={handleChange}/>
           <button><h4>Search</h4></button>
         </form>
