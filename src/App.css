@@ -1,38 +1,384 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  max-width: 1100px;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-engine {
+  background: url('./images/travelimage.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
+  height: 300px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  margin: auto;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.search-engine input {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.search-engine h3 {
+  color: aliceblue;
+}
+
+button {
+  cursor: pointer;
+  padding: .5em 2.5em;
+  border-radius: 3em;
+  border: none;
+  margin-bottom: 1em;
+  background-color: rgb(163, 66, 66);
   color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.1em;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: rgb(156, 61, 61);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('./images/search-icon.png');
+  background-position: 10px 10px;
+  background-size: 20px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img:first-child {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 10px 16px;
+}
+
+.container h3 {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.container img {
+  padding-bottom: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.container-list {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em 0 1em;
+}
+
+.address {
+  color: rgb(153, 201, 153);
+  display: flex;
+  justify-content: center;
+}
+
+/******************** LOGO ************************/
+
+.logo {
+  display: flex;
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  font-family: 'Nunito Sans', sans-serif;;
+}
+
+:root {
+  --penguin-size: 50px;
+  --penguin-skin: rgb(3, 34, 46);
+  --penguin-belly: white;
+  --penguin-beak: orange;
+}
+
+.penguin {
+  position: relative;
+  display: block;
+  width: var(--penguin-size, 100px);
+  height: var(--penguin-size, 100px);
+}
+
+.right-cheek {
+  top: 15%;
+  left: 35%;
+  background: var(--penguin-belly, white);
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.left-cheek {
+  top: 15%;
+  left: 5%;
+  background: var(--penguin-belly, white);
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.belly {
+  top: 60%;
+  left: 2.5%;
+  background: var(--penguin-belly, white);
+  width: 95%;
+  height: 100%;
+  border-radius: 120% 120% 100% 100%;
+}
+
+.penguin-top {
+  top: 10%;
+  left: 25%;
+  background: var(--penguin-skin, gray);
+  width: 50%;
+  height: 45%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.penguin-bottom {
+  top: 40%;
+  left: 23.5%;
+  background: var(--penguin-skin, gray);
+  width: 53%;
+  height: 45%;
+  border-radius: 70% 70% 100% 100%;
+}
+
+.right-hand {
+  top: 5%;
+  left: 25%;
+  background: var(--penguin-skin, black);
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 120% 30%;
+  transform: rotate(130deg);
+  z-index: -1;
+  animation-duration: 3s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  transform-origin:0% 0%;
+  animation-timing-function: linear;
+}
+
+@keyframes wave {
+    10% {
+      transform: rotate(110deg);
+    }
+    20% {
+      transform: rotate(130deg);
+    }
+    30% {
+      transform: rotate(110deg);
+    }
+    40% {
+      transform: rotate(130deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+.left-hand {
+  top: 0%;
+  left: 75%;
+  background: var(--penguin-skin, gray);
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 30% 120%;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.right-feet {
+  top: 85%;
+  left: 60%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(-80deg);
+  z-index: -2222;
+}
+
+.left-feet {
+  top: 85%;
+  left: 25%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(80deg);
+  z-index: -2222;
+}
+
+.right-eye {
+  top: 45%;
+  left: 60%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.left-eye {
+  top: 45%;
+  left: 25%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.sparkle {
+  top: 25%;
+  left:-23%;
+  background: white;
+  width: 150%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.blush-right {
+  top: 65%;
+  left: 15%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.blush-left {
+  top: 65%;
+  left: 70%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-top {
+  top: 56%;
+  left: 42%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 20%;
+  transform: rotate(136deg);
+  border-radius: 30%;
+}
+.beak-shaper {
+  top: 44%;
+  left: 44%;
+  background: white;
+  width: 12%;
+  height: 30%;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+.penguin * {
+  position: absolute;
+}
+
+/************* RESPONSIVE ************/
+
+@media (max-width: 1030px) {
+  .container-list {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 1em 1em;
+  } 
+
+  button {
+    cursor: pointer;
+    padding: .5em 2.2em;
+    border-radius: 3em;
+    border: none;
+    margin-bottom: 1em;
+    background-color: rgb(163, 66, 66);
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
   }
+}
+
+@media (max-width: 780px) {
+  .container-list {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 1em 1em;
+  } 
+
+  button {
+    cursor: pointer;
+    padding: .3em 2em;
+    border-radius: 3em;
+    border: none;
+    margin-bottom: 1em;
+    background-color: rgb(163, 66, 66);
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 450px) {
+  .container-list {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    margin: 0 1em 1em;
+  } 
+
+}
+
+@media (max-width: 350px) {
+  .container-list {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    margin: 0 1em 1em;
+  } 
 }
