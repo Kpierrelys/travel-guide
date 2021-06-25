@@ -349,11 +349,11 @@ input[type=text] {
 
 /************* RESPONSIVE ************/
 
-@media (max-width: 1030px) {
+@media (max-width: 1300px) {
   .container-list {
     display: grid;
     grid-gap: 1em;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 1em 1em;
   } 
 

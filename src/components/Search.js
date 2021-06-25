@@ -12,7 +12,6 @@ const Search = ({ getPosts, getWeather }) => {
         if (!city) {
             alert('city needed...')
         } else {
-            // console.log(city)
             getPosts(city);
             getWeather(city);
             setCity('')
