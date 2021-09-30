@@ -347,6 +347,16 @@ input[type=text] {
   position: absolute;
 }
 
+/* ERROR */
+.error {
+  background-color: #C73E1D;
+  padding: 5px 5px;
+  text-align: center;
+  margin: 20px 40px;
+  color: #f1f1f1;
+  border-radius: 2px;
+}
+
 /************* RESPONSIVE ************/
 
 @media (max-width: 1600px) {
@@ -398,5 +408,4 @@ input[type=text] {
     grid-template-columns: 1fr;
     margin: 0 1em 1em;
   } 
-
 }

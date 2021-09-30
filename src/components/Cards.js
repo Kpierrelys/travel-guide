@@ -6,7 +6,7 @@ const Cards = ({ posts, weather }) => {
         <div>
             <Temperature weather={weather} />
             <ul className='container-list'>
-                {posts.map(post => (
+                {posts.map((post) => (
                 <li className='card' key={post.id}>
                     <div className='container'>
                     <h3>{post.name}</h3>
@@ -23,4 +23,4 @@ const Cards = ({ posts, weather }) => {
     )
 }
 
-export default Cards
+export default Cards;
