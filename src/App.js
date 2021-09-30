@@ -22,7 +22,7 @@ function App() {
   const [error, setError] = useState('');
 
   const getPosts = async (city) => {
-        const urlToFetch =  url + city + '&limit=3&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20210616';
+        const urlToFetch =  url + city + '&limit=6&client_id=' + clientId + '&client_secret=' + clientSecret + '&v=20210616';
         try {
           const res = await axios.get(urlToFetch);
           const data = res.data;
