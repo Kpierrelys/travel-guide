@@ -50,7 +50,7 @@ function App() {
     <div >
       <Logo />
       <Search getWeather={getWeather} getPosts={getPosts}/>
-      {weather ? <Cards posts={posts} weather={weather}/> : <div>{error && <h4 className='error'>City not found...</h4>}</div>}
+      {weather ? <Cards posts={posts} weather={weather}/> : <div>{error && <h4 className='error'>404 ERROR: City not found</h4>}</div>}
     </div>
   );
 }
